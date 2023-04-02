@@ -1,0 +1,17 @@
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\bin\Debug\net6.0\HGWork.Module.deps.json
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\bin\Debug\net6.0\HGWork.Module.dll
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\bin\Debug\net6.0\HGWork.Module.pdb
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\bin\Debug\net6.0\HGWork.DTO.dll
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\bin\Debug\net6.0\HGWork.Model.dll
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\bin\Debug\net6.0\HGWork.DTO.pdb
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\bin\Debug\net6.0\HGWork.Model.pdb
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\obj\Debug\net6.0\HGWork.Module.csproj.AssemblyReference.cache
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\obj\Debug\net6.0\HGWork.Module.GeneratedMSBuildEditorConfig.editorconfig
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\obj\Debug\net6.0\HGWork.Module.AssemblyInfoInputs.cache
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\obj\Debug\net6.0\HGWork.Module.AssemblyInfo.cs
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\obj\Debug\net6.0\HGWork.Module.csproj.CoreCompileInputs.cache
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\obj\Debug\net6.0\HGWork.Module.csproj.CopyComplete
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\obj\Debug\net6.0\HGWork.Module.dll
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\obj\Debug\net6.0\refint\HGWork.Module.dll
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\obj\Debug\net6.0\HGWork.Module.pdb
+E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Module\obj\Debug\net6.0\ref\HGWork.Module.dll
