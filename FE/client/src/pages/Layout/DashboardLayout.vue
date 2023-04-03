@@ -11,14 +11,14 @@
         <md-icon>home</md-icon>
         <p>Trang chủ</p>
       </sidebar-link>
-      <sidebar-link to="/user">
+      <sidebar-link to="/createproject">
         <md-icon>content_paste</md-icon>
         <p>Dự án</p>
       </sidebar-link>
-      <!-- <sidebar-link to="/user">
-        <md-icon>person</md-icon>
-        <p>User Profile</p>
-      </sidebar-link> -->
+      <sidebar-link to="/listproject">
+        <md-icon>content_paste</md-icon>
+        <p>Danh sách dự án</p>
+      </sidebar-link>
       <sidebar-link to="/task">
         <md-icon>content_paste</md-icon>
         <p>Công việc</p>

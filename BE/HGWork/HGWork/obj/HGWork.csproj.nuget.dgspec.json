@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork\\HGWork.csproj": {}
+    "E:\\HGWork\\BE\\HGWork\\HGWork\\HGWork.csproj": {}
   },
   "projects": {
-    "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj": {
+    "E:\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj",
+        "projectUniqueName": "E:\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj",
         "projectName": "HGWork.DTO",
-        "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\obj\\",
+        "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "E:\\HGWork\\BE\\HGWork\\HGWork.DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,8 +49,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -55,21 +58,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
+    "E:\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj",
+        "projectUniqueName": "E:\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj",
         "projectName": "HGWork.Model",
-        "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\obj\\",
+        "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Model\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -122,8 +129,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -132,21 +138,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Module\\HGWork.Module.csproj": {
+    "E:\\HGWork\\BE\\HGWork\\HGWork.Module\\HGWork.Module.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Module\\HGWork.Module.csproj",
+        "projectUniqueName": "E:\\HGWork\\BE\\HGWork\\HGWork.Module\\HGWork.Module.csproj",
         "projectName": "HGWork.Module",
-        "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Module\\HGWork.Module.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Module\\obj\\",
+        "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Module\\HGWork.Module.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Module\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -160,11 +170,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj": {
-                "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj"
+              "E:\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj": {
+                "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj"
               },
-              "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
-                "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj"
+              "E:\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
+                "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj"
               }
             }
           }
@@ -190,8 +200,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -200,21 +209,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj": {
+    "E:\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj",
+        "projectUniqueName": "E:\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj",
         "projectName": "HGWork.Service",
-        "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Service\\obj\\",
+        "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Service\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -228,11 +241,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj": {
-                "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj"
+              "E:\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj": {
+                "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj"
               },
-              "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
-                "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj"
+              "E:\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
+                "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj"
               }
             }
           }
@@ -262,8 +275,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -272,21 +284,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork\\HGWork.csproj": {
+    "E:\\HGWork\\BE\\HGWork\\HGWork\\HGWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork\\HGWork.csproj",
+        "projectUniqueName": "E:\\HGWork\\BE\\HGWork\\HGWork\\HGWork.csproj",
         "projectName": "HGWork",
-        "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork\\HGWork.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork\\obj\\",
+        "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork\\HGWork.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "E:\\HGWork\\BE\\HGWork\\HGWork\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -300,14 +316,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
-                "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj"
+              "E:\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
+                "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj"
               },
-              "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Module\\HGWork.Module.csproj": {
-                "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Module\\HGWork.Module.csproj"
+              "E:\\HGWork\\BE\\HGWork\\HGWork.Module\\HGWork.Module.csproj": {
+                "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Module\\HGWork.Module.csproj"
               },
-              "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj": {
-                "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj"
+              "E:\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj": {
+                "projectPath": "E:\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj"
               }
             }
           }
@@ -322,6 +338,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -347,8 +367,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -360,7 +379,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

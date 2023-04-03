@@ -1,6 +1,7 @@
 ﻿using HGWork.DTO;
 using HGWork.Model;
 using HGWork.Service.Interfaces;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HGWork.Controllers
