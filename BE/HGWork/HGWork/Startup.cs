@@ -40,6 +40,7 @@ namespace HGWork
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IAccessService, AccessService>();
             services.AddTransient<IProjectService, ProjectService>();
+            services.AddTransient<ITaskService, TaskService>();
 
             // Registration Mapper 
             // Auto Mapper Configurations

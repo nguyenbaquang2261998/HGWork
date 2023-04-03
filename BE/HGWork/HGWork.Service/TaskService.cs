@@ -2,39 +2,31 @@
 using HGWork.DTO;
 using HGWork.Model;
 using HGWork.Service.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.WebSockets;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace HGWork.Service
 {
-    public class ProjectService : IProjectService
+    public class TaskService : ITaskService
     {
         private readonly HGWorkDbContext _context;
         private readonly ILogger _logger;
         private readonly IMapper _mapper;
 
-        public ProjectService(HGWorkDbContext context, ILogger<UserService> logger, IMapper mapper)
+        public TaskService(HGWorkDbContext context, ILogger<UserService> logger, IMapper mapper)
         {
             _context = context;
             _logger = logger;
             _mapper = mapper;
         }
 
-        public async Task<ResponseBase<int>> Create(ProjectDto project)
+        public async Task<ResponseBase<int>> Create(Model.Task request)
         {
             try
             {
-                if (project != null)
+                if (request != null)
                 {
-                    var request = _mapper.Map<ProjectDto, Project>(project);
-
-                    await _context.Projects.AddAsync(request);
+                    await _context.Tasks.AddAsync(request);
                     await _context.SaveChangesAsync();
                     return new ResponseBase<int>
                     {
@@ -61,7 +53,7 @@ namespace HGWork.Service
             }
         }
 
-        public async Task<ResponseBase<int>> Update(Project request)
+        public async Task<ResponseBase<int>> Update(Model.Task request)
         {
             try
             {
@@ -78,7 +70,7 @@ namespace HGWork.Service
                         };
                     }
 
-                    _context.Projects.Update(request);
+                    _context.Tasks.Update(request);
                     await _context.SaveChangesAsync();
                     return new ResponseBase<int>
                     {
@@ -105,23 +97,23 @@ namespace HGWork.Service
             }
         }
 
-        public async Task<ResponseBase<Project>> GetById(int id)
+        public async Task<ResponseBase<Model.Task>> GetById(int id)
         {
             try
             {
-                var projects = await _context.Projects.FirstOrDefaultAsync(x => x.Id == id);
+                var task = await _context.Tasks.FirstOrDefaultAsync(x => x.Id == id);
 
 
-                return new ResponseBase<Project>
+                return new ResponseBase<Model.Task>
                 {
                     StatusCode = 200,
-                    Data = projects,
+                    Data = task,
                     Message = "Thành công"
                 };
             }
             catch (Exception ex)
             {
-                return new ResponseBase<Project>
+                return new ResponseBase<Model.Task>
                 {
                     StatusCode = 400,
                     Data = null,
@@ -131,43 +123,30 @@ namespace HGWork.Service
 
         }
 
-        public async Task<ResponseBase<List<Project>>> GetAll()
+        public async Task<ResponseBase<List<Model.Task>>> GetAll()
         {
             try
             {
-                var projects = await _context.Projects.ToListAsync();
+                var tasks = await _context.Tasks.ToListAsync();
 
 
-                return new ResponseBase<List<Project>>
+                return new ResponseBase<List<Model.Task>>
                 {
                     StatusCode = 200,
-                    Data = projects,
+                    Data = tasks,
                     Message = "Thành công"
                 };
             }
             catch (Exception ex)
             {
-                return new ResponseBase<List<Project>>
+                return new ResponseBase<List<Model.Task>>
                 {
                     StatusCode = 400,
                     Data = null,
                     Message = ex.Message
                 };
             }
-           
-        }
 
-        public async Task<ResponseBase<List<Model.Task>>> GetTasks(int id)
-        {
-            var tasks = await _context.Tasks.Where(x => x.ProjectId == id).ToListAsync();
-
-            return new ResponseBase<List<Model.Task>>()
-            {
-                StatusCode = 200,
-                Data = tasks,
-                Message =  "Thành công"
-            };
         }
-        
     }
 }
