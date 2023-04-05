@@ -7,7 +7,7 @@
       :sidebar-background-image="sidebarBackgroundImage"
     >
       <mobile-menu slot="content"></mobile-menu>
-      <sidebar-link to="/dashboard">
+      <sidebar-link to="/home">
         <md-icon>home</md-icon>
         <p>Trang chủ</p>
       </sidebar-link>
@@ -23,21 +23,17 @@
         <md-icon>content_paste</md-icon>
         <p>Công việc</p>
       </sidebar-link>
-      <sidebar-link to="/icons">
+      <sidebar-link to="/dashboard">
         <md-icon>bubble_chart</md-icon>
         <p>Báo cáo</p>
-      </sidebar-link>
-      <sidebar-link to="/maps">
-        <md-icon>location_on</md-icon>
-        <p>Maps</p>
       </sidebar-link>
       <sidebar-link to="/notifications">
         <md-icon>notifications</md-icon>
         <p>Thông báo</p>
       </sidebar-link>
-      <sidebar-link to="/table">
-        <md-icon>content_paste</md-icon>
-        <p>Table list</p>
+      <sidebar-link to="/icons">
+        <md-icon>book</md-icon>
+        <p>HDSD</p>
       </sidebar-link>
       <sidebar-link to="/upgrade" class="active-pro">
         <md-icon>unarchive</md-icon>

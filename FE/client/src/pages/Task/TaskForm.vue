@@ -8,7 +8,31 @@
 
       <md-card-content>
         <div class="md-layout">
-          <div class="md-layout-item md-small-size-100 md-size-100">
+          <div class="md-layout-item md-small-size-100 md-size-20">
+            <div class="md-layout-item">
+              <md-field>
+                <label for="font">Dự án</label>
+                <md-select v-model="font" name="project" id="project">
+                  <md-option value="arial">Arial</md-option>
+                  <md-option value="calibri">Calibri</md-option>
+                  <md-option value="cambria">Cambria</md-option>
+                  <md-option value="comic-sans">Comic Sans</md-option>
+                  <md-option value="consolas">Consolas</md-option>
+                  <md-option value="courier">Courier</md-option>
+                  <md-option value="droid-sans">Droid Sans</md-option>
+                  <md-option value="georgia">Georgia</md-option>
+                  <md-option value="helvetica">Helvetica</md-option>
+                  <md-option value="impact">Impact</md-option>
+                  <md-option value="roboto">Roboto</md-option>
+                  <md-option value="segoe-ui">Segoe UI</md-option>
+                  <md-option value="times-new-roman">Times New Roman</md-option>
+                  <md-option value="ubuntu">Ubuntu</md-option>
+                  <md-option value="verdana">Verdana</md-option>
+                </md-select>
+              </md-field>
+            </div>
+          </div>
+          <div class="md-layout-item md-small-size-100 md-size-80">
             <md-field>
               <label>Tên công việc</label>
               <md-input v-model="username"></md-input>
@@ -44,13 +68,29 @@
               <md-input v-model="address" type="date"></md-input>
             </md-field>
           </div>
-          <div class="md-layout-item md-small-size-100 md-size-50">
+          <div class="md-layout-item md-small-size-100 md-size-20">
             <md-field>
-              <label>Người nhận </label>
-              <md-input v-model="address" type="text"></md-input>
+              <label for="font">Người nhận</label>
+              <md-select v-model="font" name="font" id="font">
+                <md-option value="arial">Arial</md-option>
+                <md-option value="calibri">Calibri</md-option>
+                <md-option value="cambria">Cambria</md-option>
+                <md-option value="comic-sans">Comic Sans</md-option>
+                <md-option value="consolas">Consolas</md-option>
+                <md-option value="courier">Courier</md-option>
+                <md-option value="droid-sans">Droid Sans</md-option>
+                <md-option value="georgia">Georgia</md-option>
+                <md-option value="helvetica">Helvetica</md-option>
+                <md-option value="impact">Impact</md-option>
+                <md-option value="roboto">Roboto</md-option>
+                <md-option value="segoe-ui">Segoe UI</md-option>
+                <md-option value="times-new-roman">Times New Roman</md-option>
+                <md-option value="ubuntu">Ubuntu</md-option>
+                <md-option value="verdana">Verdana</md-option>
+              </md-select>
             </md-field>
           </div>
-          <div class="md-layout-item md-small-size-100 md-size-50" style="margin-top: 40px">
+          <div class="md-layout-item md-small-size-100 md-size-80" style="margin-top: 40px">
             <label>Đã bàn giao <md-input v-model="firstname" type="checkbox"></md-input></label>
           </div>
           <div class="md-layout-item md-size-100 text-right">

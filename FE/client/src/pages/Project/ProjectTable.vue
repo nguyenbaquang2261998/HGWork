@@ -10,13 +10,13 @@
                     <md-card-content>
                         <template>
                             <div>
-                                <md-table v-model="projects.data" :table-header-color="tableHeaderColor">
+                                <md-table v-model="projects.data" :table-header-color="tableHeaderColor" md-sort="name" md-sort-order="asc">
                                     <md-table-row slot="md-table-row" slot-scope="{ item }">
-                                        <md-table-cell md-label="Tên dự án">{{ item.name }}</md-table-cell>
+                                        <md-table-cell md-sort-by="name" md-label="Tên dự án">{{ item.name }}</md-table-cell>
                                         <md-table-cell md-label="Code">{{ item.code }}</md-table-cell>
                                         <md-table-cell md-label="Mô tả">{{ item.description }}</md-table-cell>
-                                        <md-table-cell md-label="Ngày bắt đầu">{{ item.startDate }}</md-table-cell>
-                                        <md-table-cell md-label="Ngày kết thúc">{{ item.endDate }}</md-table-cell>
+                                        <md-table-cell md-sort-by="startDate" md-label="Ngày bắt đầu">{{ item.startDate }}</md-table-cell>
+                                        <md-table-cell md-sort-by="startDate" md-label="Ngày kết thúc">{{ item.endDate }}</md-table-cell>
                                     </md-table-row>
                                 </md-table>
                             </div>

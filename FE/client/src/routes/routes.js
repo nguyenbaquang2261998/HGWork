@@ -4,6 +4,7 @@ import Dashboard from "@/pages/Dashboard.vue";
 import UserProfile from "@/pages/UserProfile.vue";
 import Task from "@/pages/Task/TaskForm.vue";
 import ProjectTable from "@/pages/Project/ProjectTable.vue";
+import HomePage from "@/pages/Home/HomePage.vue";
 import TableList from "@/pages/TableList.vue";
 import Typography from "@/pages/Typography.vue";
 import Icons from "@/pages/Icons.vue";
@@ -17,6 +18,11 @@ const routes = [
     component: DashboardLayout,
     redirect: "/dashboard",
     children: [
+      {
+        path: "home",
+        name: "Trang chủ",
+        component: HomePage,
+      },
       {
         path: "dashboard",
         name: "Dashboard",
