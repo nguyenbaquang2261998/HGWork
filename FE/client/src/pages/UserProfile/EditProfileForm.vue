@@ -21,10 +21,17 @@
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
-            <md-field>
+            <!-- <md-field>
               <label>Trạng thái</label>
               <md-input id="status" v-model="form.status" type="text"></md-input>
-            </md-field>
+            </md-field> -->
+            <md-field>
+                <label for="status">Trạng thái</label>
+                <md-select v-model="form.status" name="status" id="status">
+                  <md-option value="0">Active</md-option>
+                  <md-option value="1">InActive</md-option>
+                </md-select>
+              </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-100">
             <md-field>
@@ -97,4 +104,3 @@ export default {
   }
 };
 </script>
-<style></style>

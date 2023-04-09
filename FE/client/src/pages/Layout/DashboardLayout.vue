@@ -12,29 +12,29 @@
         <p>Trang chủ</p>
       </sidebar-link>
       <sidebar-link to="/createproject">
-        <md-icon>content_paste</md-icon>
-        <p>Dự án</p>
+        <md-icon>note_add</md-icon>
+        <p>Tạo Dự án</p>
       </sidebar-link>
       <sidebar-link to="/listproject">
-        <md-icon>content_paste</md-icon>
+        <md-icon>queue_play_next</md-icon>
         <p>Danh sách dự án</p>
       </sidebar-link>
       <sidebar-link to="/task">
-        <md-icon>content_paste</md-icon>
-        <p>Công việc</p>
+        <md-icon>add_task</md-icon>
+        <p>Tạo công việc</p>
       </sidebar-link>
       <sidebar-link to="/dashboard">
-        <md-icon>bubble_chart</md-icon>
+        <md-icon>flag</md-icon>
         <p>Báo cáo</p>
       </sidebar-link>
       <sidebar-link to="/notifications">
         <md-icon>notifications</md-icon>
         <p>Thông báo</p>
       </sidebar-link>
-      <sidebar-link to="/icons">
+      <!-- <sidebar-link to="/icons">
         <md-icon>book</md-icon>
         <p>HDSD</p>
-      </sidebar-link>
+      </sidebar-link> -->
       <sidebar-link to="/upgrade" class="active-pro">
         <md-icon>unarchive</md-icon>
         <p>Đăng xuất</p>

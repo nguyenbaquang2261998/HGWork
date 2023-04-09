@@ -15,11 +15,17 @@ namespace HGWork.Controllers
             _userService = userService;
         }
 
-        //[HttpGet("getuser/{id}")]
-        //public async Task<User> GetUser([FromQuery] int id)
-        //{
-        //    return await _userService.GetUserById(id);
-        //}
+        [HttpGet("getuser/{id}")]
+        public async Task<User> GetUser([FromQuery] int id)
+        {
+            return await _userService.GetUserById(id);
+        }
+
+        [HttpGet("getall")]
+        public async Task<List<User>> GetAll()
+        {
+            return await _userService.GetAll();
+        }
 
 
         [HttpPost]
