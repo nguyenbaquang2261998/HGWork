@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form v-on:submit.prevent="submitForm">
     <md-card>
       <md-card-header :data-background-color="dataBackgroundColor">
         <h4 class="title">Tạo dự án</h4>
@@ -11,41 +11,48 @@
           <div class="md-layout-item md-small-size-100 md-size-100">
             <md-field>
               <label>Tên dự án</label>
-              <md-input v-model="username"></md-input>
+              <md-input id="name" v-model="form.name"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <label>Code</label>
-              <md-input v-model="username" type="text"></md-input>
+              <md-input id="code" v-model="form.code" type="text"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
-            <md-field>
+            <!-- <md-field>
               <label>Trạng thái</label>
-              <md-input v-model="firstname" type="text"></md-input>
-            </md-field>
+              <md-input id="status" v-model="form.status" type="text"></md-input>
+            </md-field> -->
+            <md-field>
+                <label for="status">Trạng thái</label>
+                <md-select v-model="form.status" name="status" id="status">
+                  <md-option value="0">Active</md-option>
+                  <md-option value="1">InActive</md-option>
+                </md-select>
+              </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-100">
             <md-field>
               <label>Mô tả</label>
-              <md-input v-model="emailadress" type="text"></md-input>
+              <md-input id="description" v-model="form.description" type="text"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <p style="margin-top: 8px; margin-right: 100px;">Ngày bắt đầu</p>
-              <md-input v-model="lastname" type="date"></md-input>
+              <md-input id="startDate" v-model="form.startDate" type="date"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <p style="margin-top: 8px; margin-right: 100px;">Ngày kết thúc</p>
-              <md-input v-model="address" type="date"></md-input>
+              <md-input id="endDate" v-model="form.endDate" type="date"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-size-100 text-right">
-            <md-button class="md-raised md-success">Tạo dự án</md-button>
+            <md-button type="submit" class="md-raised md-success">Tạo dự án</md-button>
           </div>
         </div>
       </md-card-content>
@@ -53,6 +60,7 @@
   </form>
 </template>
 <script>
+import axios from 'axios';
 export default {
   name: "edit-profile-form",
   props: {
@@ -63,19 +71,36 @@ export default {
   },
   data() {
     return {
-      username: null,
-      disabled: null,
-      emailadress: null,
-      lastname: null,
-      firstname: null,
-      address: null,
-      city: null,
-      country: null,
-      code: null,
-      aboutme:
-        "Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.",
-    };
+      form: {
+        name: '',
+        code: '',
+        status: 0,
+        description: '',
+        startDate: null,
+        endDate: null
+      }
+    }
   },
+  // Gửi request lên server khi mà postPost() được gọi
+  methods: {
+    submitForm() {
+      axios.post('http://localhost:8080/project/create', this.form)
+        .then((res) => {
+          console.log(res);
+          if(res.status == 200)
+          {
+            location.href = "http://localhost:8080/#/listproject";
+          }
+          else{
+            alert('Đã có lỗi xảy ra!');
+          }
+        })
+        .catch((error) => {
+          alert('Đã có lỗi xảy ra!');
+        }).finally(() => {
+          //Perform action in always
+        });
+    }
+  }
 };
 </script>
-<style></style>

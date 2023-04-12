@@ -59,61 +59,6 @@
         }
       }
     },
-    "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Helper\\HGWork.Helper.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Helper\\HGWork.Helper.csproj",
-        "projectName": "HGWork.Helper",
-        "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Helper\\HGWork.Helper.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Helper\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -286,9 +231,6 @@
               "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj": {
                 "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj"
               },
-              "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Helper\\HGWork.Helper.csproj": {
-                "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Helper\\HGWork.Helper.csproj"
-              },
               "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
                 "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj"
               }
@@ -380,6 +322,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

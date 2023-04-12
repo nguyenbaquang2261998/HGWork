@@ -1,6 +1,7 @@
 ﻿using HGWork.DTO;
 using HGWork.Model;
 using HGWork.Service.Interfaces;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HGWork.Controllers
@@ -31,7 +32,7 @@ namespace HGWork.Controllers
         }
 
         [HttpGet("gettasks/{id}")]
-        public async Task<ResponseBase<List<Model.Task>>> GetTasks([FromQuery] int id)
+        public async Task<ResponseBase<List<Model.Task>>> GetTasks(int id)
         {
             var res = await _projectService.GetTasks(id);
             return res;

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "l2VW6p7R+OnlF/sGu+ASndQ3k8WZeVOny0J9m4aMhOmUt8UpuHDTwQGXgraIaXqJKZ3OPDmBOs3cCeq3CFx7Yw==",
+  "dgSpecHash": "sDVT16z40QMJWRjSd4g9mCcaFQ5kK71jClgQJ+rOfije9luV7DBzArK2QbG78vTITkG3ehtXgQ+T/7zwD61tCA==",
   "success": true,
   "projectFilePath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Service\\HGWork.Service.csproj",
   "expectedPackageFiles": [
@@ -49,5 +49,12 @@
     "C:\\Users\\PC\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Service\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
