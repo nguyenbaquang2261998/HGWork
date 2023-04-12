@@ -810,6 +810,16 @@
           "bin/placeholder/HGWork.DTO.dll": {}
         }
       },
+      "HGWork.Helper/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/HGWork.Helper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HGWork.Helper.dll": {}
+        }
+      },
       "HGWork.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2055,6 +2065,11 @@
       "path": "../HGWork.DTO/HGWork.DTO.csproj",
       "msbuildProject": "../HGWork.DTO/HGWork.DTO.csproj"
     },
+    "HGWork.Helper/1.0.0": {
+      "type": "project",
+      "path": "../HGWork.Helper/HGWork.Helper.csproj",
+      "msbuildProject": "../HGWork.Helper/HGWork.Helper.csproj"
+    },
     "HGWork.Model/1.0.0": {
       "type": "project",
       "path": "../HGWork.Model/HGWork.Model.csproj",
@@ -2065,6 +2080,7 @@
     "net6.0": [
       "AutoMapper >= 12.0.1",
       "HGWork.DTO >= 1.0.0",
+      "HGWork.Helper >= 1.0.0",
       "HGWork.Model >= 1.0.0",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0"
     ]
@@ -2098,6 +2114,9 @@
           "projectReferences": {
             "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj": {
               "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj"
+            },
+            "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Helper\\HGWork.Helper.csproj": {
+              "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Helper\\HGWork.Helper.csproj"
             },
             "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj": {
               "projectPath": "D:\\mmo\\HGWork\\BE\\HGWork\\HGWork.Model\\HGWork.Model.csproj"

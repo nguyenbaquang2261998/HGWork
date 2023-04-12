@@ -148,5 +148,28 @@ namespace HGWork.Service
             }
 
         }
+
+        public async Task<ResponseBase<List<Model.Task>>> FilterTasks(FilterTaskDto filter)
+        {
+            var tasks = new List<Model.Task>();
+            if (filter.ProjectId > 0)
+            {
+                tasks = tasks.Where(x => x.ProjectId == filter.ProjectId).ToList();
+            }
+            if (filter.UserId > 0)
+            {
+                tasks = tasks.Where(x => x.UserId == filter.UserId).ToList();
+            }
+            if (filter.Status > 0)
+            {
+                tasks = tasks.Where(x => x.Status == filter.Status).ToList();
+            }
+            if (filter.StartDate != null && filter.EndDate != null)
+            {
+                tasks = tasks.Where(x => x.StartDate <= filter.StartDate && x.EndDate >= filter.EndDate).ToList();
+            }
+
+            return new ResponseBase<List<Model.Task>> { StatusCode = 200, Data = tasks , Message = "Filter success"};
+        }
     }
 }

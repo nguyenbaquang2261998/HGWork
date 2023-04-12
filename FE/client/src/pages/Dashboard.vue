@@ -11,12 +11,12 @@
           data-background-color="blue"
         >
           <template slot="content">
-            <h4 class="title">Daily Sales</h4>
+            <h4 class="title">Tổng số dự án</h4>
             <p class="category">
               <span class="text-success"
                 ><i class="fas fa-long-arrow-alt-up"></i> 55%
               </span>
-              increase in today sales.
+              đã được tạo
             </p>
           </template>
 
@@ -39,8 +39,8 @@
           data-background-color="red"
         >
           <template slot="content">
-            <h4 class="title">Email Subscription</h4>
-            <p class="category">Last Campaign Performance</p>
+            <h4 class="title">Tổng số Task</h4>
+            <p class="category">10</p>
           </template>
 
           <template slot="footer">
@@ -82,8 +82,8 @@
           </template>
 
           <template slot="content">
-            <p class="category">Revenue</p>
-            <h3 class="title">$34,245</h3>
+            <p class="category">Canceled Task</p>
+            <h3 class="title">2</h3>
           </template>
 
           <template slot="footer">
@@ -103,7 +103,7 @@
           </template>
 
           <template slot="content">
-            <p class="category">Used Space</p>
+            <p class="category">BackLog Task</p>
             <h3 class="title">
               49/50
               <small>GB</small>

@@ -26,3 +26,17 @@ E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\refint\H
 E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\HGWork.Model.pdb
 E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\HGWork.Model.genruntimeconfig.cache
 E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\ref\HGWork.Model.dll
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\bin\Debug\net6.0\HGWork.Model.deps.json
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\bin\Debug\net6.0\HGWork.Model.runtimeconfig.json
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\bin\Debug\net6.0\HGWork.Model.dll
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\bin\Debug\net6.0\HGWork.Model.pdb
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\HGWork.Model.csproj.AssemblyReference.cache
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\HGWork.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\HGWork.Model.AssemblyInfoInputs.cache
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\HGWork.Model.AssemblyInfo.cs
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\HGWork.Model.csproj.CoreCompileInputs.cache
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\HGWork.Model.dll
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\refint\HGWork.Model.dll
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\HGWork.Model.pdb
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\HGWork.Model.genruntimeconfig.cache
+D:\mmo\HGWork\BE\HGWork\HGWork.Model\obj\Debug\net6.0\ref\HGWork.Model.dll

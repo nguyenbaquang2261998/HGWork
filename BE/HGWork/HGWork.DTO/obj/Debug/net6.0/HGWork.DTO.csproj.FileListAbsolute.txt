@@ -10,3 +10,15 @@ E:\Project chấm công\HAGwork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\HGWork.DTO
 E:\Project chấm công\HAGwork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\refint\HGWork.DTO.dll
 E:\Project chấm công\HAGwork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\HGWork.DTO.pdb
 E:\Project chấm công\HAGwork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\ref\HGWork.DTO.dll
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\bin\Debug\net6.0\HGWork.DTO.deps.json
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\bin\Debug\net6.0\HGWork.DTO.dll
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\bin\Debug\net6.0\HGWork.DTO.pdb
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\HGWork.DTO.csproj.AssemblyReference.cache
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\HGWork.DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\HGWork.DTO.AssemblyInfoInputs.cache
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\HGWork.DTO.AssemblyInfo.cs
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\HGWork.DTO.csproj.CoreCompileInputs.cache
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\HGWork.DTO.dll
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\refint\HGWork.DTO.dll
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\HGWork.DTO.pdb
+D:\mmo\HGWork\BE\HGWork\HGWork.DTO\obj\Debug\net6.0\ref\HGWork.DTO.dll
