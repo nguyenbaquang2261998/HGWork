@@ -1,60 +1,11 @@
-E:\Project chấm công\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.deps.json
-E:\Project chấm công\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.dll
-E:\Project chấm công\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.pdb
-E:\Project chấm công\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.csproj.AssemblyReference.cache
-E:\Project chấm công\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.GeneratedMSBuildEditorConfig.editorconfig
-E:\Project chấm công\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.AssemblyInfoInputs.cache
-E:\Project chấm công\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.AssemblyInfo.cs
-E:\Project chấm công\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.csproj.CoreCompileInputs.cache
-E:\Project chấm công\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.dll
-E:\Project chấm công\BE\HGWork\HGWork.Service\obj\Debug\net6.0\refint\HGWork.Service.dll
-E:\Project chấm công\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.pdb
-E:\Project chấm công\BE\HGWork\HGWork.Service\obj\Debug\net6.0\ref\HGWork.Service.dll
-E:\Project chấm công\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Model.dll
-E:\Project chấm công\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Model.pdb
-E:\Project chấm công\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.csproj.CopyComplete
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.deps.json
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.dll
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.pdb
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.DTO.dll
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Model.dll
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.DTO.pdb
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Model.pdb
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.csproj.AssemblyReference.cache
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.GeneratedMSBuildEditorConfig.editorconfig
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.AssemblyInfoInputs.cache
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.AssemblyInfo.cs
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.csproj.CoreCompileInputs.cache
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.csproj.CopyComplete
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.dll
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\refint\HGWork.Service.dll
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.pdb
-E:\Project chấm công\HAGwork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\ref\HGWork.Service.dll
-<<<<<<< HEAD
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.deps.json
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.dll
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.pdb
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.DTO.dll
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Model.dll
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.DTO.pdb
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Model.pdb
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.csproj.AssemblyReference.cache
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.GeneratedMSBuildEditorConfig.editorconfig
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.AssemblyInfoInputs.cache
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.AssemblyInfo.cs
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.csproj.CoreCompileInputs.cache
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.csproj.CopyComplete
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.dll
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\refint\HGWork.Service.dll
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.pdb
-D:\mmo\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\ref\HGWork.Service.dll
-=======
 E:\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.deps.json
 E:\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.dll
 E:\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Service.pdb
 E:\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.DTO.dll
+E:\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Helper.dll
 E:\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Model.dll
 E:\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.DTO.pdb
+E:\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Helper.pdb
 E:\HGWork\BE\HGWork\HGWork.Service\bin\Debug\net6.0\HGWork.Model.pdb
 E:\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.csproj.AssemblyReference.cache
 E:\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.GeneratedMSBuildEditorConfig.editorconfig
@@ -66,4 +17,3 @@ E:\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.dll
 E:\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\refint\HGWork.Service.dll
 E:\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\HGWork.Service.pdb
 E:\HGWork\BE\HGWork\HGWork.Service\obj\Debug\net6.0\ref\HGWork.Service.dll
->>>>>>> be26ee408c4eb903f2991ea7e65851a902cb1ffe

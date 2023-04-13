@@ -17,10 +17,10 @@ namespace HGWork.Controllers
         }
 
 
-        [HttpGet("login")]
-        public async Task<ResponseBase<int>> Login()
+        [HttpPost("login")]
+        public async Task<ResponseBase<bool>> Login([FromBody] LoginDto request)
         {
-            return await _userService.GetAll();
+            return await _userService.Login(request.Username, request.Password);
         }
        
     }

@@ -4,7 +4,9 @@ import Dashboard from "@/pages/Dashboard.vue";
 import UserProfile from "@/pages/UserProfile.vue";
 import Task from "@/pages/Task/TaskForm.vue";
 import ProjectTable from "@/pages/Project/ProjectTable.vue";
+import TaskTable from "@/pages/Task/TaskTable.vue";
 import HomePage from "@/pages/Home/HomePage.vue";
+import LoginPage from "@/pages/Login.vue";
 import TableList from "@/pages/TableList.vue";
 import Typography from "@/pages/Typography.vue";
 import Icons from "@/pages/Icons.vue";
@@ -39,9 +41,14 @@ const routes = [
         component: ProjectTable,
       },
       {
-        path: "task",
+        path: "createtask",
         name: "Công việc",
         component: Task,
+      },
+      {
+        path: "listtasks/:id",
+        name: "Danh sách công việc",
+        component: TaskTable,
       },
       {
         path: "table",
@@ -75,6 +82,11 @@ const routes = [
         path: "upgrade",
         name: "Upgrade to PRO",
         component: UpgradeToPRO,
+      },
+      {
+        path: "login",
+        name: "Login",
+        component: LoginPage,
       },
     ],
   },

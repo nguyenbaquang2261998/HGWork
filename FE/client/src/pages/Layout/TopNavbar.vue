@@ -76,9 +76,9 @@
               </a>
             </li>
 
-            <md-list-item href="#/user">
+            <md-list-item href="#/login">
               <i class="material-icons">person</i>
-              <p class="hidden-lg hidden-md">Profile</p>
+              <p class="hidden-lg hidden-md">Login</p>
             </md-list-item>
           </md-list>
         </div>

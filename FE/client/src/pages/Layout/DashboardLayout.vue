@@ -19,9 +19,13 @@
         <md-icon>queue_play_next</md-icon>
         <p>Danh sách dự án</p>
       </sidebar-link>
-      <sidebar-link to="/task">
+      <sidebar-link to="/createtask">
         <md-icon>add_task</md-icon>
         <p>Tạo công việc</p>
+      </sidebar-link>
+      <sidebar-link to="/listtasks/0">
+        <md-icon>checklist</md-icon>
+        <p>Danh sách công việc</p>
       </sidebar-link>
       <sidebar-link to="/dashboard">
         <md-icon>flag</md-icon>

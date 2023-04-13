@@ -63,7 +63,7 @@
             <md-field>
               <label for="userId">Người nhận</label>
               <md-select v-model="form.userId">
-                  <md-option v-for="user in listuser" v-bind:key="user.id" :value="user.id">
+                  <md-option v-for="user in listuser.data" v-bind:key="user.id" :value="user.id">
                     {{ user.name }}
                   </md-option>
                 </md-select>
