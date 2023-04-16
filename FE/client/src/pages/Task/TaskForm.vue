@@ -36,8 +36,11 @@
             <md-field>
               <label for="status">Trạng thái</label>
               <md-select v-model="form.status" name="status" id="status">
-                <md-option value="0">Active</md-option>
-                <md-option value="1">InActive</md-option>
+                <md-option value="0">Backlog</md-option>
+                <md-option value="1">Doing</md-option>
+                <md-option value="2">Done</md-option>
+                <md-option value="3">Pending</md-option>
+                <md-option value="4">Canceled</md-option>
               </md-select>
             </md-field>
           </div>
@@ -73,7 +76,7 @@
             <label>Đã bàn giao <md-input v-model="firstname" type="checkbox"></md-input></label>
           </div> -->
           <div class="md-layout-item md-size-100 text-right">
-            <md-button type="submit" class="md-raised md-success">Tạo dự án</md-button>
+            <md-button type="submit" class="md-raised md-success">Tạo task</md-button>
           </div>
         </div>
       </md-card-content>
@@ -136,7 +139,7 @@ export default {
         .then((res) => {
           console.log(res);
           if (res.status == 200) {
-            location.href = "http://localhost:8080/#/listproject";
+            location.href = "http://localhost:8080/#/listtask";
           }
           else {
             alert('Đã có lỗi xảy ra!');

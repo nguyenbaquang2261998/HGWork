@@ -2,10 +2,7 @@
   <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
     <notifications></notifications>
 
-    <side-bar
-      :sidebar-item-color="sidebarBackground"
-      :sidebar-background-image="sidebarBackgroundImage"
-    >
+    <side-bar v-if="isLogin == true" :sidebar-item-color="sidebarBackground" :sidebar-background-image="sidebarBackgroundImage">
       <mobile-menu slot="content"></mobile-menu>
       <sidebar-link to="/home">
         <md-icon>home</md-icon>
@@ -35,10 +32,14 @@
         <md-icon>notifications</md-icon>
         <p>Thông báo</p>
       </sidebar-link>
-      <!-- <sidebar-link to="/icons">
-        <md-icon>book</md-icon>
-        <p>HDSD</p>
-      </sidebar-link> -->
+      <sidebar-link v-if="isAdmin == 'true'" to="/listuser">
+        <md-icon>people_outline</md-icon>
+        <p>Danh sách tài khoản</p>
+      </sidebar-link>
+      <sidebar-link v-if="isAdmin == 'true'" to="/createuser">
+        <md-icon>person_add_alt</md-icon>
+        <p>Thêm tài khoản</p>
+      </sidebar-link>
       <sidebar-link to="/upgrade" class="active-pro">
         <md-icon>unarchive</md-icon>
         <p>Đăng xuất</p>
@@ -48,11 +49,11 @@
     <div class="main-panel">
       <top-navbar></top-navbar>
 
-      <fixed-plugin
+      <!-- <fixed-plugin
         :color.sync="sidebarBackground"
         :image.sync="sidebarBackgroundImage"
       >
-      </fixed-plugin>
+      </fixed-plugin> -->
 
       <dashboard-content> </dashboard-content>
 
@@ -66,7 +67,7 @@ import TopNavbar from "./TopNavbar.vue";
 import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
 import MobileMenu from "@/pages/Layout/MobileMenu.vue";
-import FixedPlugin from "./Extra/FixedPlugin.vue";
+// import FixedPlugin from "./Extra/FixedPlugin.vue";
 
 export default {
   components: {
@@ -74,13 +75,23 @@ export default {
     DashboardContent,
     ContentFooter,
     MobileMenu,
-    FixedPlugin,
+    // FixedPlugin,
   },
   data() {
     return {
       sidebarBackground: "green",
       sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
+      isAdmin: false,
+      isLogin: false
     };
+  },
+  created() {
+    this.isAdmin = localStorage.getItem('user');
+
+    if (localStorage.getItem('user')) {
+      this.isLogin = true;
+    }
+    console.log(this.isAdmin);
   },
 };
 </script>

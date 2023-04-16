@@ -2,11 +2,11 @@
     <form v-on:submit.prevent="submitForm">
         <div class="main" :style="mainStyle">
             <h1>HGWORK Login!</h1>
-            <input class="login-input" type="text" name="username" id="username" placeholder="User Name" v-model="form.username"
-                :style="input" />
+            <input class="login-input" type="text" name="username" id="username" placeholder="User Name"
+                v-model="form.username" :style="input" />
             <br />
-            <input class="login-input" type="password" name="password" id="password" v-model="form.password" placeholder="P@$$W0RD"
-                :style="input" />
+            <input class="login-input" type="password" name="password" id="password" v-model="form.password"
+                placeholder="P@$$W0RD" :style="input" />
             <br />
             <input type="submit" value="Login" class="button login-input" id="done" :style="inputStyle" />
             <br />
@@ -40,6 +40,7 @@ export default {
                         localStorage.setItem('user', JSON.stringify(res.data.data));
                         console.log(localStorage.getItem('user'));
                         location.href = "http://localhost:8080/#/listproject";
+                        location.reload();
                     }
                     else {
                         alert(res.data.message);
@@ -62,8 +63,8 @@ export default {
 .main {
     background: rgba(255, 255, 255, 0.4);
     position: absolute;
-    top: 115%;
-    left: 30%;
+    top: 140%;
+    left: 20%;
     width: 40%;
     text-align: center;
     padding: 5px;
