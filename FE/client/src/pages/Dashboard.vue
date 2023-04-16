@@ -14,7 +14,7 @@
             <h4 class="title">Tổng số dự án</h4>
             <p class="category">
               <span class="text-success"
-                ><i class="fas fa-long-arrow-alt-up"></i> 55%
+                ><i class="fas fa-long-arrow-alt-up"></i> {{ dashboard.data.totalProjects }}
               </span>
               đã được tạo
             </p>
@@ -40,7 +40,7 @@
         >
           <template slot="content">
             <h4 class="title">Tổng số Task</h4>
-            <p class="category">10</p>
+            <p class="category">{{ dashboard.data.totalTasks }}</p>
           </template>
 
           <template slot="footer">
@@ -62,13 +62,13 @@
         >
           <template slot="content">
             <h4 class="title">Completed Tasks</h4>
-            <p class="category">Last Campaign Performance</p>
+            <p class="category">{{ dashboard.data.totalTasksDone }}</p>
           </template>
 
           <template slot="footer">
             <div class="stats">
               <md-icon>access_time</md-icon>
-              campaign sent 26 minutes ago
+              update 2 minutes ago
             </div>
           </template>
         </chart-card>
@@ -83,13 +83,13 @@
 
           <template slot="content">
             <p class="category">Canceled Task</p>
-            <h3 class="title">2</h3>
+            <h3 class="title">{{ dashboard.data.totalTasksCanceled }}</h3>
           </template>
 
           <template slot="footer">
             <div class="stats">
               <md-icon>date_range</md-icon>
-              Last 24 Hours
+              update now
             </div>
           </template>
         </stats-card>
@@ -103,10 +103,9 @@
           </template>
 
           <template slot="content">
-            <p class="category">BackLog Task</p>
+            <p class="category">Doing Task</p>
             <h3 class="title">
-              49/50
-              <small>GB</small>
+              {{ dashboard.data.totalTasksDoing }}
             </h3>
           </template>
 
@@ -200,6 +199,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import {
   StatsCard,
   ChartCard,
@@ -304,7 +304,19 @@ export default {
           ],
         ],
       },
+      dashboard: [],
+      errors: []
     };
   },
+  created() {
+        axios.get(`http://localhost:8080/dashboard/report`)
+            .then(response => {
+                this.dashboard = response.data;
+                console.log(this.dashboard);
+            })
+            .catch(e => {
+                console.log("error");
+            })
+    },
 };
 </script>

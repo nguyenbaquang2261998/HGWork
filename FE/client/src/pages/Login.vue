@@ -37,7 +37,7 @@ export default {
                 .then((res) => {
                     console.log(res);
                     if (res.data.statusCode == 200) {
-                        localStorage.setItem('user', JSON.stringify(res.data));
+                        localStorage.setItem('user', JSON.stringify(res.data.data));
                         console.log(localStorage.getItem('user'));
                         location.href = "http://localhost:8080/#/listproject";
                     }
