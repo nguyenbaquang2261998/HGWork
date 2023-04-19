@@ -10,13 +10,19 @@
                     <md-card-content>
                         <template>
                             <div>
-                                <md-table v-model="tasks.data" :table-header-color="tableHeaderColor" md-sort="name" md-sort-order="asc">
+                                <md-table v-model="tasks.data" :table-header-color="tableHeaderColor" md-sort="name"
+                                    md-sort-order="asc">
                                     <md-table-row slot="md-table-row" slot-scope="{ item }">
                                         <md-table-cell md-sort-by="name" md-label="Tên task">{{ item.name }}</md-table-cell>
                                         <md-table-cell md-label="Code">{{ item.code }}</md-table-cell>
                                         <md-table-cell md-label="Mô tả">{{ item.description }}</md-table-cell>
-                                        <md-table-cell md-sort-by="startDate" md-label="Ngày bắt đầu">{{ item.startDate }}</md-table-cell>
-                                        <md-table-cell md-sort-by="startDate" md-label="Ngày kết thúc">{{ item.endDate }}</md-table-cell>
+                                        <md-table-cell md-sort-by="startDate" md-label="Ngày bắt đầu">{{ item.startDate}}</md-table-cell>
+                                        <md-table-cell md-sort-by="startDate" md-label="Ngày kết thúc">{{ item.endDate}}</md-table-cell>
+                                        <md-table-cell md-label="Thao tác">
+                                            <md-button @click="toUpdate(item.id)" class="md-fab md-mini" style="margin-left: 10px;background-color: coral!important;">
+                                                <md-icon style="margin-right: 15px;">edit</md-icon>
+                                            </md-button>
+                                        </md-table-cell>
                                     </md-table-row>
                                 </md-table>
                             </div>
@@ -44,7 +50,7 @@ export default {
     },
     created() {
         const param = this.$route.params.id;
-        axios.get(`http://localhost:8080/project/gettasks/`+ param)
+        axios.get(`http://localhost:8080/project/gettasks/` + param)
             .then(response => {
                 this.tasks = response.data;
                 console.log(this.tasks);
@@ -53,5 +59,10 @@ export default {
                 console.log("error");
             })
     },
+    methods:{
+        toUpdate(taskId) {
+            location.href = "http://localhost:8080/#/updatetask/" + taskId;
+        }
+    }
 };
 </script>

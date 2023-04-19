@@ -2,7 +2,8 @@
   <form v-on:submit.prevent="submitForm">
     <md-card>
       <md-card-header :data-background-color="dataBackgroundColor">
-        <h4 class="title">Tạo dự án</h4>
+        <h4 v-if="form.id == 0" class="title">Tạo dự án</h4>
+        <h4 v-if="form.id > 0" class="title">Cập nhật dự án</h4>
         <p class="category">Nhập thông tin dự án</p>
       </md-card-header>
 
@@ -26,12 +27,12 @@
               <md-input id="status" v-model="form.status" type="text"></md-input>
             </md-field> -->
             <md-field>
-                <label for="status">Trạng thái</label>
-                <md-select v-model="form.status" name="status" id="status">
-                  <md-option value="0">Active</md-option>
-                  <md-option value="1">InActive</md-option>
-                </md-select>
-              </md-field>
+              <label for="status">Trạng thái</label>
+              <md-select v-model="form.status" name="status" id="status">
+                <md-option value="0">Active</md-option>
+                <md-option value="1">InActive</md-option>
+              </md-select>
+            </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-100">
             <md-field>
@@ -52,7 +53,8 @@
             </md-field>
           </div>
           <div class="md-layout-item md-size-100 text-right">
-            <md-button type="submit" class="md-raised md-success">Tạo dự án</md-button>
+            <md-button v-if="form.id == 0" type="submit" class="md-raised md-success">Tạo dự án</md-button>
+            <md-button v-if="form.id > 0" type="submit" class="md-raised md-success">Cập nhật dự án</md-button>
           </div>
         </div>
       </md-card-content>
@@ -72,26 +74,45 @@ export default {
   data() {
     return {
       form: {
+        id: 0,
         name: '',
         code: '',
         status: 0,
         description: '',
-        startDate: null,
-        endDate: null
+        startDate: new Date(),
+        endDate: new Date()
       }
+    }
+  },
+  created() {
+    const param = this.$route.params.id;
+    if (typeof(param) != "undefined") {
+      axios.get(`http://localhost:8080/project/detail/` + param)
+        .then(response => {
+          this.form.id = response.data.data.id;
+          this.form.name = response.data.data.name;
+          this.form.code = response.data.data.code;
+          this.form.status = response.data.data.status;
+          this.form.description = response.data.data.description;
+          this.form.startDate = this.formatDate(response.data.data.startDate);
+          this.form.endDate = this.formatDate(response.data.data.endDate);
+        })
+        .catch(e => {
+          console.log("error");
+        })
     }
   },
   // Gửi request lên server khi mà postPost() được gọi
   methods: {
     submitForm() {
-      axios.post('http://localhost:8080/project/create', this.form)
+      if(this.form.id > 0)
+      {
+        axios.post('http://localhost:8080/project/update', this.form)
         .then((res) => {
-          console.log(res);
-          if(res.status == 200)
-          {
+          if (res.status == 200) {
             location.href = "http://localhost:8080/#/listproject";
           }
-          else{
+          else {
             alert('Đã có lỗi xảy ra!');
           }
         })
@@ -100,7 +121,33 @@ export default {
         }).finally(() => {
           //Perform action in always
         });
+      }
+      else
+      {
+        axios.post('http://localhost:8080/project/create', this.form)
+        .then((res) => {
+          if (res.status == 200) {
+            location.href = "http://localhost:8080/#/listproject";
+          }
+          else {
+            alert('Đã có lỗi xảy ra!');
+          }
+        })
+        .catch((error) => {
+          alert('Đã có lỗi xảy ra!');
+        }).finally(() => {
+          //Perform action in always
+        });
+      }
+    },
+    formatDate(input) {
+      var datePart = input.match(/\d+/g),
+        year = datePart[0], // get only two digits
+        month = datePart[1], day = datePart[2];
+
+      return year + '-' + month + '-' + day;
     }
-  }
+  },
+
 };
 </script>

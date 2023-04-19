@@ -17,6 +17,14 @@
                                         <md-table-cell md-label="Mô tả">{{ item.description }}</md-table-cell>
                                         <md-table-cell md-sort-by="startDate" md-label="Ngày bắt đầu">{{ item.startDate }}</md-table-cell>
                                         <md-table-cell md-sort-by="startDate" md-label="Ngày kết thúc">{{ item.endDate }}</md-table-cell>
+                                        <md-table-cell md-label="Thao tác">
+                                            <md-button @click="toList(item.id)" class="md-fab md-mini" style="background-color: green!important;">
+                                                <md-icon style="margin-right: 15px;">checklist</md-icon>
+                                            </md-button>
+                                            <md-button @click="toUpdate(item.id)" class="md-fab md-mini" style="margin-left: 10px;background-color: coral!important;">
+                                                <md-icon style="margin-right: 15px;">edit</md-icon>
+                                            </md-button>
+                                        </md-table-cell>
                                     </md-table-row>
                                 </md-table>
                             </div>
@@ -52,5 +60,20 @@ export default {
                 console.log("error");
             })
     },
+    methods: {
+        toList(projectId) {
+            location.href = "http://localhost:8080/#/listtasks/" + projectId;
+        },
+        toUpdate(projectId) {
+            location.href = "http://localhost:8080/#/updateproject/" + projectId;
+        },
+        formatDate(input) {
+            var datePart = input.match(/\d+/g),
+                year = datePart[0], // get only two digits
+                month = datePart[1], day = datePart[2];
+
+            return year + '-' + month + '-' + day;
+        }
+    }
 };
 </script>

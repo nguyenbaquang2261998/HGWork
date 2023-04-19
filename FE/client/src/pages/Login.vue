@@ -25,6 +25,9 @@ export default {
     },
     data() {
         return {
+            notifications: {
+                topCenter: false,
+            },
             form: {
                 username: '',
                 password: ''
@@ -43,15 +46,25 @@ export default {
                         location.reload();
                     }
                     else {
-                        alert(res.data.message);
+                        this.notifyVue('top', 'right', 'Sai tài khoản hoặc mật khẩu')
                     }
                 })
                 .catch((error) => {
-                    alert('Đã có lỗi xảy ra!');
+                    this.notifyVue('top', 'right', 'Sai tài khoản hoặc mật khẩu')
                 }).finally(() => {
                     //Perform action in always
                 });
-        }
+        },
+        notifyVue(verticalAlign, horizontalAlign, dataMess) {
+            this.$notify({
+                message:
+                    dataMess,
+                icon: "add_alert",
+                horizontalAlign: horizontalAlign,
+                verticalAlign: verticalAlign,
+                type: "danger",
+            });
+        },
     }
 };
 </script>

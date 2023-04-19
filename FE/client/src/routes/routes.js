@@ -71,6 +71,22 @@ const routes = [
         }
       },
       {
+        path: "updateproject/:id",
+        name: "Cập nhật Dự án",
+        component: UserProfile,
+        props: true,
+        beforeEnter: (to, from, next) => {
+          if(localStorage.getItem('user')) {
+            console.log('co quyen truy cap task');
+            next() // Take you to /something
+          } else {
+            console.log(localStorage.getItem('user'));
+              // If params.blah is blank or in your case, does not have permission, redirect back to the home page
+            next({ name: 'Login' }) 
+          }
+        }
+      },
+      {
         path: "listproject",
         name: "Danh sách dự án",
         component: ProjectTable,
@@ -89,6 +105,22 @@ const routes = [
       {
         path: "createtask",
         name: "Công việc",
+        component: Task,
+        props: true,
+        beforeEnter: (to, from, next) => {
+          if(localStorage.getItem('user')) {
+            console.log('co quyen truy cap task');
+            next() // Take you to /something
+          } else {
+            console.log(localStorage.getItem('user'));
+              // If params.blah is blank or in your case, does not have permission, redirect back to the home page
+            next({ name: 'Login' }) 
+          }
+        }
+      },
+      {
+        path: "updatetask/:id",
+        name: "Cập nhật công việc",
         component: Task,
         props: true,
         beforeEnter: (to, from, next) => {

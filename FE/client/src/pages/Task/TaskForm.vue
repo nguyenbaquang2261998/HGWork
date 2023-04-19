@@ -2,7 +2,8 @@
   <form v-on:submit.prevent="submitForm">
     <md-card>
       <md-card-header data-background-color="green">
-        <h4 class="title">Tạo công việc </h4>
+        <h4 v-if="form.id == 0" class="title">Tạo công việc </h4>
+        <h4 v-if="form.id > 0" class="title">Cập nhật công việc </h4>
         <p class="category">Nhập thông tin công việc</p>
       </md-card-header>
 
@@ -76,7 +77,8 @@
             <label>Đã bàn giao <md-input v-model="firstname" type="checkbox"></md-input></label>
           </div> -->
           <div class="md-layout-item md-size-100 text-right">
-            <md-button type="submit" class="md-raised md-success">Tạo task</md-button>
+            <md-button v-if="form.id == 0" type="submit" class="md-raised md-success">Tạo công việc</md-button>
+            <md-button v-if="form.id > 0" type="submit" class="md-raised md-success">Cập nhật công việc</md-button>
           </div>
         </div>
       </md-card-content>
@@ -96,12 +98,13 @@ export default {
   data() {
     return {
       form: {
+        id: 0,
         name: '',
         code: '',
         status: 0,
         description: '',
-        startDate: null,
-        endDate: null,
+        startDate: new Date(),
+        endDate: new Date(),
         isAssigned: true,
         userId: 0,
         projectId: 0
@@ -131,15 +134,36 @@ export default {
       .catch(e => {
         console.log("error");
       });
+
+    // get data task if update
+    const param = this.$route.params.id;
+    if (typeof(param) != "undefined") {
+      axios.get(`http://localhost:8080/task/detail/` + param)
+        .then(response => {
+          this.form.id = response.data.data.id;
+          this.form.name = response.data.data.name;
+          this.form.code = response.data.data.code;
+          this.form.status = response.data.data.status;
+          this.form.description = response.data.data.description;
+          this.form.startDate = this.formatDate(response.data.data.startDate);
+          this.form.endDate = this.formatDate(response.data.data.endDate);
+          this.form.isAssigned = response.data.data.isAssigned;
+          this.form.projectId = response.data.data.projectId;
+          this.form.userId = response.data.data.userId;
+        })
+        .catch(e => {
+          console.log("error");
+        })
+    }
   },
 
   methods: {
     submitForm() {
-      axios.post('http://localhost:8080/task/create', this.form)
+      if(this.form.id > 0){
+        axios.post('http://localhost:8080/task/update', this.form)
         .then((res) => {
-          console.log(res);
           if (res.status == 200) {
-            location.href = "http://localhost:8080/#/listtask";
+            location.href = "http://localhost:8080/#/listtask/0";
           }
           else {
             alert('Đã có lỗi xảy ra!');
@@ -150,6 +174,30 @@ export default {
         }).finally(() => {
           //Perform action in always
         });
+      }
+      else{
+        axios.post('http://localhost:8080/task/create', this.form)
+        .then((res) => {
+          if (res.status == 200) {
+            location.href = "http://localhost:8080/#/listtask/0";
+          }
+          else {
+            alert('Đã có lỗi xảy ra!');
+          }
+        })
+        .catch((error) => {
+          alert('Đã có lỗi xảy ra!');
+        }).finally(() => {
+          //Perform action in always
+        });
+      }
+    },
+    formatDate(input) {
+      var datePart = input.match(/\d+/g),
+        year = datePart[0], // get only two digits
+        month = datePart[1], day = datePart[2];
+
+      return year + '-' + month + '-' + day;
     }
   }
 };
