@@ -29,17 +29,7 @@ export default {
   data() {
     return {
       selected: [],
-      users: [
-        {
-          name: 'Sign contract for "What are conference organizers afraid of?"',
-        },
-        {
-          name: "Lines From Great Russian Literature? Or E-mails From My Boss?",
-        },
-        {
-          name: "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-        },
-      ],
+      tasks: [],
     };
   },
   methods: {
@@ -47,5 +37,17 @@ export default {
       this.selected = items;
     },
   },
+  created() {
+        const userId = this.$route.params.userId;
+        const status = this.$route.params.status;
+        axios.get(`http://localhost:8080/user/gettaskbyuser?userId=` + userId + `&status=` + status)
+            .then(response => {
+                this.tasks = response.data;
+                console.log(this.tasks);
+            })
+            .catch(e => {
+                console.log("error");
+            })
+    },
 };
 </script>

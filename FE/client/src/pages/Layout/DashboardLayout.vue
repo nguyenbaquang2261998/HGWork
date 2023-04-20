@@ -8,6 +8,10 @@
         <md-icon>home</md-icon>
         <p>Trang chủ</p>
       </sidebar-link>
+      <sidebar-link to="/mytask/1/0">
+        <md-icon>event</md-icon>
+        <p>Công việc của tôi</p>
+      </sidebar-link>
       <sidebar-link to="/createproject">
         <md-icon>note_add</md-icon>
         <p>Tạo Dự án</p>
@@ -40,10 +44,10 @@
         <md-icon>person_add_alt</md-icon>
         <p>Thêm tài khoản</p>
       </sidebar-link>
-      <sidebar-link to="/upgrade" class="active-pro">
-        <md-icon>unarchive</md-icon>
-        <p>Đăng xuất</p>
-      </sidebar-link>
+      <md-button style="background-color: coral !important; position: absolute!important; width: 100%!important;bottom: 10px!important;" @click="$event => logout()" class="active-pro">
+        <md-icon >unarchive</md-icon>
+        <p style="margin-right: 15px;">Đăng xuất</p>
+      </md-button>
     </side-bar>
 
     <div class="main-panel">
@@ -93,5 +97,12 @@ export default {
     }
     console.log(this.isAdmin);
   },
+  methods:{
+    logout(){
+      this.isLogin = false;
+      localStorage.setItem('user', undefined);
+      location.href = "http://localhost:8080/#/login";
+    },
+  }
 };
 </script>

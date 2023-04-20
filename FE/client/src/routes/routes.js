@@ -5,6 +5,7 @@ import UserProfile from "@/pages/UserProfile.vue";
 import Task from "@/pages/Task/TaskForm.vue";
 import ProjectTable from "@/pages/Project/ProjectTable.vue";
 import TaskTable from "@/pages/Task/TaskTable.vue";
+import TaskNote from "@/pages/DailyNotes/TaskNote.vue";
 import UserTable from "@/pages/UserProfile/UserTable.vue";
 import UserForm from "@/pages/UserProfile/UserForm.vue";
 import HomePage from "@/pages/Home/HomePage.vue";
@@ -218,6 +219,22 @@ const routes = [
         path: "icons",
         name: "Icons",
         component: Icons,
+        props: true,
+        beforeEnter: (to, from, next) => {
+          if(localStorage.getItem('user')) {
+            console.log('co quyen truy cap task');
+            next() // Take you to /something
+          } else {
+            console.log(localStorage.getItem('user'));
+              // If params.blah is blank or in your case, does not have permission, redirect back to the home page
+            next({ name: 'Login' }) 
+          }
+        }
+      },
+      {
+        path: "mytask/:userId/:status",
+        name: "Công việc của tôi",
+        component: TaskNote,
         props: true,
         beforeEnter: (to, from, next) => {
           if(localStorage.getItem('user')) {
