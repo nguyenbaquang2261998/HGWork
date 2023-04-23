@@ -2,9 +2,9 @@
     <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-100">
         <nav-tabs-card>
             <template slot="content">
-                <span class="md-nav-tabs-title">Danh sách công việc:</span>
+                <span class="md-nav-tabs-title">Tasks:</span>
                 <md-tabs class="md-success" md-alignment="left">
-                    <md-tab style="margin-left: 100px;" id="tab-home" md-label="All Task" md-icon="list">
+                    <md-tab id="tab-home" md-label="All Task" md-icon="list">
                         <div>
                             <md-table v-model="tasks" @md-selected="onSelect">
                                 <md-table-row slot="md-table-row" slot-scope="{ item }" md-selectable="multiple"

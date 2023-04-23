@@ -61,7 +61,7 @@
           data-background-color="green"
         >
           <template slot="content">
-            <h4 class="title">Completed Tasks</h4>
+            <h4 class="title">Tổng số người dùng</h4>
             <p class="category">{{ dashboard.data.totalTasksDone }}</p>
           </template>
 
@@ -76,9 +76,9 @@
       <div
         class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
       >
-        <stats-card data-background-color="green">
+        <stats-card data-background-color="orange">
           <template slot="header">
-            <md-icon>store</md-icon>
+            <md-icon>cancel</md-icon>
           </template>
 
           <template slot="content">
@@ -97,9 +97,9 @@
       <div
         class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
       >
-        <stats-card data-background-color="orange">
+        <stats-card data-background-color="green">
           <template slot="header">
-            <md-icon>content_copy</md-icon>
+            <md-icon>code</md-icon>
           </template>
 
           <template slot="content">
@@ -143,12 +143,12 @@
       >
         <stats-card data-background-color="blue">
           <template slot="header">
-            <i class="fab fa-twitter"></i>
+            <md-icon>check</md-icon>
           </template>
 
           <template slot="content">
-            <p class="category">Folowers</p>
-            <h3 class="title">+245</h3>
+            <p class="category">Completed Tasks</p>
+            <h3 class="title">{{ dashboard.data.totalTasksDone }}</h3>
           </template>
 
           <template slot="footer">
@@ -160,7 +160,7 @@
         </stats-card>
       </div>
       <div
-        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
+        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50" style="display: none;"
       >
         <md-card>
           <md-card-header data-background-color="orange">
@@ -173,7 +173,7 @@
         </md-card>
       </div>
       <div
-        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
+        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50" style="display: none;"
       >
         <nav-tabs-card>
           <template slot="content">
