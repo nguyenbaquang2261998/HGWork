@@ -23,6 +23,13 @@ namespace HGWork.Controllers
             return res;
         }
 
+        [HttpGet("filter/{name}")]
+        public async Task<ResponseBase<List<TaskView>>> Filter(string name)
+        {
+            var res = await _taskService.Filter(name);
+            return res;
+        }
+
         [HttpGet("detail/{id}")]
         public async Task<ResponseBase<Model.Task>> Detail(int id)
         {

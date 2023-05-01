@@ -50,7 +50,7 @@ namespace HGWork.Service
                     {
                         status = TaskStatusEnum.Canceled.ToString();
                     }
-                    this.SendMail(request.Name, status, "http://localhost:8080/#/updatetask/" + request.Id.ToString(), request.StartDate.ToString("MM/dd/yyyy"), request.EndDate.ToString("MM/dd/yyyy"), user.Email);
+                    //this.SendMail(request.Name, status, "http://localhost:8080/#/updatetask/" + request.Id.ToString(), request.StartDate.ToString("MM/dd/yyyy"), request.EndDate.ToString("MM/dd/yyyy"), user.Email);
 
                     return new ResponseBase<int>
                     {
@@ -102,7 +102,7 @@ namespace HGWork.Service
                     {
                         status = TaskStatusEnum.Canceled.ToString();
                     }
-                    this.SendMail(request.Name, status, "http://localhost:8080/#/updatetask/" + request.Id.ToString(), request.StartDate.ToString("MM/dd/yyyy"), request.EndDate.ToString("MM/dd/yyyy"), user.Email);
+                    //this.SendMail(request.Name, status, "http://localhost:8080/#/updatetask/" + request.Id.ToString(), request.StartDate.ToString("MM/dd/yyyy"), request.EndDate.ToString("MM/dd/yyyy"), user.Email);
 
                     _context.Tasks.Update(request);
                     await _context.SaveChangesAsync();
@@ -162,6 +162,44 @@ namespace HGWork.Service
             try
             {
                 var tasks = await _context.Tasks.ToListAsync();
+                var res = tasks.Select(x => new TaskView()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Code = x.Code,
+                    Description = x.Description,
+                    StartDate = x.StartDate.ToString("MM/dd/yyyy"),
+                    EndDate = x.EndDate.ToString("MM/dd/yyyy")
+                }).ToList();
+
+                return new ResponseBase<List<TaskView>>
+                {
+                    StatusCode = 200,
+                    Data = res,
+                    Message = "Thành công"
+                };
+            }
+            catch (Exception ex)
+            {
+                return new ResponseBase<List<TaskView>>
+                {
+                    StatusCode = 400,
+                    Data = null,
+                    Message = ex.Message
+                };
+            }
+
+        }
+
+        public async Task<ResponseBase<List<TaskView>>> Filter(string filter)
+        {
+            try
+            {
+                var tasks = await _context.Tasks.ToListAsync();
+                if (!string.IsNullOrEmpty(filter))
+                {
+                    tasks = tasks.Where(x => x.Name.Contains(filter)).ToList();
+                }
                 var res = tasks.Select(x => new TaskView()
                 {
                     Id = x.Id,
