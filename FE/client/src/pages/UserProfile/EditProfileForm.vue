@@ -12,44 +12,51 @@
           <div class="md-layout-item md-small-size-100 md-size-100">
             <md-field>
               <label>Tên dự án</label>
-              <md-input id="name" v-model="form.name"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" id="name" v-model="form.name"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <label>Code</label>
-              <md-input id="code" v-model="form.code" type="text"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" id="code" v-model="form.code" type="text"></md-input>
             </md-field>
           </div>
-          <div class="md-layout-item md-small-size-100 md-size-50">
-            <!-- <md-field>
-              <label>Trạng thái</label>
-              <md-input id="status" v-model="form.status" type="text"></md-input>
-            </md-field> -->
+          <div class="md-layout-item md-small-size-100 md-size-25">
             <md-field>
               <label for="status">Trạng thái</label>
-              <md-select v-model="form.status" name="status" id="status">
+              <md-select required v-model="form.status" name="status" id="status">
                 <md-option value="0">Active</md-option>
                 <md-option value="1">InActive</md-option>
+              </md-select>
+            </md-field>
+          </div>
+          <div class="md-layout-item md-small-size-100 md-size-25">
+            <md-field>
+              <label for="priority">Độ ưu tiên</label>
+              <md-select required v-model="form.priority" name="priority" id="priority">
+                <md-option value="0">Thấp</md-option>
+                <md-option value="1">Trung bình</md-option>
+                <md-option value="2">Cao</md-option>
+                <md-option value="3">Quan trọng</md-option>
               </md-select>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-100">
             <md-field>
               <label>Mô tả</label>
-              <md-input id="description" v-model="form.description" type="text"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" id="description" v-model="form.description" type="text"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <p style="margin-top: 8px; margin-right: 100px;">Ngày bắt đầu</p>
-              <md-input id="startDate" v-model="form.startDate" type="date"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" id="startDate" v-model="form.startDate" type="date"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <p style="margin-top: 8px; margin-right: 100px;">Ngày kết thúc</p>
-              <md-input id="endDate" v-model="form.endDate" type="date"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" id="endDate" v-model="form.endDate" type="date"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-size-100 text-right">
@@ -80,7 +87,8 @@ export default {
         status: 0,
         description: '',
         startDate: new Date(),
-        endDate: new Date()
+        endDate: new Date(),
+        priority: 0
       }
     }
   },
@@ -94,6 +102,7 @@ export default {
           this.form.code = response.data.data.code;
           this.form.status = response.data.data.status;
           this.form.description = response.data.data.description;
+          this.form.priority = response.data.data.priority;
           this.form.startDate = this.formatDate(response.data.data.startDate);
           this.form.endDate = this.formatDate(response.data.data.endDate);
         })

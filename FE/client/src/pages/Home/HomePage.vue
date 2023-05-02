@@ -4,8 +4,8 @@
             <img style="width: 80%" src="../../assets/img/backdrop.png" alt="">
         </div>
         <div style="display: inline-block; margin-top: -120px;margin-left: 490px;">
-            <img style="width: 35%" src="../../assets/img/intro1.png" alt="">
-            <img style="width: 35%" src="../../assets/img/intro2.png" alt="">
+            <a href="#/mytask/1/0"><img style="width: 35%" src="../../assets/img/intro1.png" alt=""></a>
+            <a href=""><img style="width: 35%" src="../../assets/img/intro2.png" alt=""></a>
         </div>
     </div>
 </template>

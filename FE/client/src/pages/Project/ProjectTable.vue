@@ -6,6 +6,12 @@
                     <md-card-header data-background-color="green">
                         <h4 class="title">Các dự án đã triển khai</h4>
                         <p class="category">Thông tin các dự án đã triển khai</p>
+                        <div style="width:25%">
+                            <md-field class="disable-line">
+                                <label style="margin: 0px 0px 10px 5px; color: black !important;"><md-icon>search</md-icon>Tìm kiếm: Nhập tên dự án hoặc mã dự án...</label>
+                                <md-input v-on:blur="filter();" id="keyword" style="background-color: lightcyan !important; border-radius: 5px;" v-model="keyword"></md-input>
+                            </md-field>
+                        </div>
                     </md-card-header>
                     <md-card-content>
                         <template>
@@ -37,6 +43,7 @@
 </template>
 <script>
 import axios from 'axios';
+import { rawListeners } from 'process';
 export default {
     props: {
         tableHeaderColor: {
@@ -47,7 +54,8 @@ export default {
     data() {
         return {
             projects: [],
-            errors: []
+            errors: [],
+            keyword: '',
         }
     },
     created() {
@@ -73,7 +81,32 @@ export default {
                 month = datePart[1], day = datePart[2];
 
             return year + '-' + month + '-' + day;
+        },
+        filter(){
+            if(this.keyword == ''){
+                axios.get(`http://localhost:8080/project/getall`)
+            .then(response => {
+                this.projects = response.data;
+            })
+            .catch(e => {
+                console.log("error");
+            })
+            }
+            else
+            {axios.get(`http://localhost:8080/project/filter/`+ this.keyword)
+                .then(response => {
+                    this.projects = response.data;
+                })
+                .catch(e => {
+                    console.log("error");
+            })}
         }
     }
 };
 </script>
+
+<style>
+.disable-line:after {
+    height: 0px!important;
+}
+</style>

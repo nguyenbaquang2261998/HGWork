@@ -21,7 +21,7 @@ const routes = [
   {
     path: "/",
     component: DashboardLayout,
-    redirect: "/dashboard",
+    redirect: "/home",
     children: [
       {
         path: "home",
@@ -41,7 +41,7 @@ const routes = [
       },
       {
         path: "dashboard",
-        name: "Dashboard",
+        name: "Thống kê",
         component: Dashboard,
         props: true,
         beforeEnter: (to, from, next) => {

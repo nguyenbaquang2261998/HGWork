@@ -11,37 +11,43 @@
           <div class="md-layout-item md-small-size-100 md-size-33">
             <md-field>
               <label>Tên người dùng</label>
-              <md-input v-model="form.name"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" v-model="form.name"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-33">
             <md-field>
               <label>Email</label>
-              <md-input v-model="form.email" type="text"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" v-model="form.email" type="text"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-33">
             <md-field>
               <label>Số điện thoại</label>
-              <md-input v-model="form.phone" type="text"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" v-model="form.phone" type="text"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <label>Tài khoản</label>
-              <md-input v-model="form.userName" type="text"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" v-model="form.userName" type="text"></md-input>
             </md-field>
           </div>
-          <div class="md-layout-item md-small-size-100 md-size-50">
+          <div class="md-layout-item md-small-size-100 md-size-25">
             <md-field>
               <label>Mật khẩu</label>
-              <md-input v-model="form.password" type="password"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" v-model="form.password" type="password"></md-input>
+            </md-field>
+          </div>
+          <div class="md-layout-item md-small-size-100 md-size-25">
+            <md-field>
+              <label>Nhập lại mật khẩu</label>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" v-model="form.repassword" type="password"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <label for="status">Trạng thái</label>
-              <md-select v-model="form.status" name="status" id="status">
+              <md-select required v-model="form.status" name="status" id="status">
                 <md-option value="0">Active</md-option>
                 <md-option value="1">Lock</md-option>
               </md-select>
@@ -79,6 +85,7 @@ export default {
         email: '',
         userName: '',
         password: '',
+        repassword: '',
         status: 0,
         isAdmin: false
       },
@@ -90,7 +97,11 @@ export default {
   // Gửi request lên server khi mà postPost() được gọi
   methods: {
     submitForm() {
-      axios.post('http://localhost:8080/user/create', this.form)
+      if (this.form.password != this.form.repassword) {
+        alert('Nhập lại mật khẩu không chính xác');
+      }
+      else{
+        axios.post('http://localhost:8080/user/create', this.form)
         .then((res) => {
           console.log(res);
           if (res.status == 200) {
@@ -105,7 +116,8 @@ export default {
         }).finally(() => {
           //Perform action in always
         });
-    }
+      }
+    },
   }
 };
 </script>

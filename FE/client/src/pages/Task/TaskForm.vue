@@ -13,7 +13,7 @@
             <div class="md-layout-item">
               <md-field>
                 <label for="font">Dự án</label>
-                <md-select v-model="form.projectId">
+                <md-select required v-model="form.projectId">
                   <md-option v-for="item in listproject.data" v-bind:key="item.id" :value="item.id">
                     {{ item.code }}
                   </md-option>
@@ -24,13 +24,13 @@
           <div class="md-layout-item md-small-size-100 md-size-80">
             <md-field>
               <label>Tên công việc</label>
-              <md-input v-model="form.name"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" v-model="form.name"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <label>Code</label>
-              <md-input v-model="form.code" type="text"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" v-model="form.code" type="text"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
@@ -48,25 +48,25 @@
           <div class="md-layout-item md-small-size-100 md-size-100">
             <md-field>
               <label>Mô tả</label>
-              <md-textarea v-model="form.description" type="text"></md-textarea>
+              <md-textarea required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" v-model="form.description" type="text"></md-textarea>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-40">
             <md-field>
               <p style="margin-top: 8px; margin-right: 100px;">Ngày bắt đầu</p>
-              <md-input id="startDate" v-model="form.startDate" type="date"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" id="startDate" v-model="form.startDate" type="date"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-40">
             <md-field>
               <p style="margin-top: 8px; margin-right: 100px;">Ngày kết thúc</p>
-              <md-input id="endDate" v-model="form.endDate" type="date"></md-input>
+              <md-input required oninvalid="this.setCustomValidity('Vui lòng điền đầy đủ thông tin')" oninput="setCustomValidity('')" id="endDate" v-model="form.endDate" type="date"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-20">
             <md-field>
               <label for="userId">Người nhận</label>
-              <md-select v-model="form.userId">
+              <md-select required v-model="form.userId">
                   <md-option v-for="user in listuser.data" v-bind:key="user.id" :value="user.id">
                     {{ user.name }}
                   </md-option>
@@ -163,7 +163,7 @@ export default {
         axios.post('http://localhost:8080/task/update', this.form)
         .then((res) => {
           if (res.status == 200) {
-            location.href = "http://localhost:8080/#/listtask/0";
+            location.href = "http://localhost:8080/#/listtasks/0";
           }
           else {
             alert('Đã có lỗi xảy ra!');
@@ -179,7 +179,7 @@ export default {
         axios.post('http://localhost:8080/task/create', this.form)
         .then((res) => {
           if (res.status == 200) {
-            location.href = "http://localhost:8080/#/listtask/0";
+            location.href = "http://localhost:8080/#/listtasks/0";
           }
           else {
             alert('Đã có lỗi xảy ra!');

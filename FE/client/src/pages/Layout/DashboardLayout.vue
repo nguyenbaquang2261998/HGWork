@@ -12,19 +12,19 @@
         <md-icon>event</md-icon>
         <p>Công việc của tôi</p>
       </sidebar-link>
-      <sidebar-link to="/createproject">
+      <sidebar-link v-if="isAdmin == 'true'" to="/createproject">
         <md-icon>note_add</md-icon>
         <p>Tạo Dự án</p>
       </sidebar-link>
       <sidebar-link to="/listproject">
         <md-icon>queue_play_next</md-icon>
-        <p>Danh sách dự án</p>
+        <p>Quản lý dự án</p>
       </sidebar-link>
       <sidebar-link to="/createtask">
         <md-icon>add_task</md-icon>
         <p>Tạo công việc</p>
       </sidebar-link>
-      <sidebar-link to="/listtasks/0">
+      <sidebar-link v-if="isAdmin == 'true'" to="/listtasks/0">
         <md-icon>checklist</md-icon>
         <p>Danh sách công việc</p>
       </sidebar-link>
@@ -45,7 +45,7 @@
         <p>Thêm tài khoản</p>
       </sidebar-link>
       <md-button style="background-color: coral !important; position: absolute!important; width: 100%!important;bottom: 10px!important;" @click="$event => logout()" class="active-pro">
-        <md-icon >unarchive</md-icon>
+        <md-icon >logout</md-icon>
         <p style="margin-right: 15px;">Đăng xuất</p>
       </md-button>
     </side-bar>
@@ -68,7 +68,7 @@
 
 <script>
 import TopNavbar from "./TopNavbar.vue";
-import ContentFooter from "./ContentFooter.vue";
+// import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
 import MobileMenu from "@/pages/Layout/MobileMenu.vue";
 // import FixedPlugin from "./Extra/FixedPlugin.vue";
@@ -77,7 +77,7 @@ export default {
   components: {
     TopNavbar,
     DashboardContent,
-    ContentFooter,
+    // ContentFooter,
     MobileMenu,
     // FixedPlugin,
   },

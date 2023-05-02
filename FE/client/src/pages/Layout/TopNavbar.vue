@@ -16,7 +16,7 @@
         </md-button>
 
         <div class="md-collapse">
-          <div class="md-autocomplete">
+          <!-- <div class="md-autocomplete">
             <md-autocomplete
               class="search"
               v-model="selectedEmployee"
@@ -24,12 +24,12 @@
             >
               <label>Tìm kiếm...</label>
             </md-autocomplete>
-          </div>
+          </div> -->
           <md-list>
-            <md-list-item href="#/">
+            <!-- <md-list-item href="#/">
               <i class="material-icons">dashboard</i>
               <p class="hidden-lg hidden-md">Dashboard</p>
-            </md-list-item>
+            </md-list-item> -->
 
             <!-- <md-list-item href="#/notifications" class="dropdown">
               <drop-down>
@@ -48,7 +48,7 @@
               </drop-down>
             </md-list-item> -->
 
-            <li class="md-list-item">
+            <!-- <li class="md-list-item">
               <a
                 href="#/notifications"
                 class="md-list-item-router md-list-item-container md-button-clean dropdown"
@@ -74,12 +74,13 @@
                   </drop-down>
                 </div>
               </a>
-            </li>
+            </li> -->
 
-            <md-list-item href="#/login">
+            <!-- <md-list-item href="#/login">
               <i class="material-icons">person</i>
               <p class="hidden-lg hidden-md">Login</p>
-            </md-list-item>
+              <md-tooltip md-direction="top">Đăng xuất</md-tooltip>
+            </md-list-item> -->
           </md-list>
         </div>
       </div>
@@ -107,6 +108,11 @@ export default {
   methods: {
     toggleSidebar() {
       this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
+    },
+    logout(){
+      this.isLogin = false;
+      localStorage.setItem('user', undefined);
+      location.href = "http://localhost:8080/#/login";
     },
   },
 };

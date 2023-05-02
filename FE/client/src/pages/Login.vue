@@ -38,11 +38,10 @@ export default {
         submitForm() {
             axios.post('http://localhost:8080/access/login', this.form)
                 .then((res) => {
-                    console.log(res);
                     if (res.data.statusCode == 200) {
-                        localStorage.setItem('user', JSON.stringify(res.data.data));
-                        console.log(localStorage.getItem('user'));
-                        location.href = "http://localhost:8080/#/listproject";
+                        localStorage.setItem('user', JSON.stringify(res.data.data.isAdmin));
+                        localStorage.setItem('userIdLogin', JSON.stringify(res.data.data.id));
+                        location.href = "http://localhost:8080/#/mytask/1/0";
                         location.reload();
                     }
                     else {
