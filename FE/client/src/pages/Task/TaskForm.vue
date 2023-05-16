@@ -115,6 +115,7 @@ export default {
     };
   },
 
+  // day la cho client goi API 
   // Gửi request lên server khi mà postPost() được gọi
   created() {
     axios.get(`http://localhost:8080/project/getall`)

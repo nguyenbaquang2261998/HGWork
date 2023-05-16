@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SLTvwZcK6O5tbH7TtRgMe8MkNBlfO0Vv9i5bOxUK2GoUEgxBJZ99HNkm9iOmUYQ5AoGPLcLHnSq+YL1YVd2A1Q==",
+  "dgSpecHash": "Hu4U/CqdhSW6bR988Q3anbbDkkCjrlElc/Z/nz26JnJNGZml6nkBHWzcznxUJwp2NfE2uOz9JZyyIbKTqkDtEQ==",
   "success": true,
   "projectFilePath": "E:\\HGWork\\BE\\HGWork\\HGWork.DTO\\HGWork.DTO.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\nguye\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

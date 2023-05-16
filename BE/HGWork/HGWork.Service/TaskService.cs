@@ -5,6 +5,7 @@ using HGWork.Service.Interfaces;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using HGWork.Helper.Enums;
+using HGWork.DTO.Kafka;
 
 namespace HGWork.Service
 {
@@ -12,15 +13,17 @@ namespace HGWork.Service
     {
         private readonly HGWorkDbContext _context;
         private readonly IEmailService _emailService;
+        private readonly IKafkaExtension _kafkaExtension;
         private readonly ILogger _logger;
         private readonly IMapper _mapper;
 
-        public TaskService(HGWorkDbContext context, ILogger<UserService> logger, IMapper mapper, IEmailService emailService)
+        public TaskService(HGWorkDbContext context, ILogger<UserService> logger, IMapper mapper, IEmailService emailService, IKafkaExtension kafkaExtension)
         {
             _context = context;
             _logger = logger;
             _mapper = mapper;
             _emailService = emailService;
+            _kafkaExtension = kafkaExtension;
         }
 
         public async Task<ResponseBase<int>> Create(Model.Task request)
@@ -52,6 +55,14 @@ namespace HGWork.Service
                         status = TaskStatusEnum.Canceled.ToString();
                     }
                     this.SendMail(request.Name, status, "http://localhost:8080/#/updatetask/" + request.Id.ToString(), request.StartDate.ToString("MM/dd/yyyy"), request.EndDate.ToString("MM/dd/yyyy"), user.Email);
+
+                    // push event kafka
+                    var message = new MessageEvent<Model.Task>(request, "CreateTaskSuccess", Guid.NewGuid().ToString(), false, 0)
+                    {
+                        LogDate = DateTime.Now,
+                        Message = "Tạo công việc thành công"
+                    };
+                    await _kafkaExtension.ProduceEventKafka("task", message);
 
                     return new ResponseBase<int>
                     {

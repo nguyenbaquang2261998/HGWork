@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Confluent.Kafka;
 using HGWork.DTO;
 using HGWork.Model;
 using HGWork.Module;
@@ -30,6 +31,17 @@ namespace HGWork
 
             services.AddControllers();
 
+            var config = new ProducerConfig
+            {
+                BootstrapServers = "pkc-lzvrd.us-west4.gcp.confluent.cloud:9092",
+                SecurityProtocol = SecurityProtocol.SaslSsl,
+                SaslMechanism = SaslMechanism.Plain,
+                SaslUsername = "CJIKJZHWESQFRO3Q",
+                SaslPassword = "3zA61fLHk5v0o5KbnhBReJlW+l4pio/LLyXKR7CqxyVXvhaw6KxUNJF2ubxlaJDR"
+            };
+
+            services.AddTransient<IProducer<Null, string>>(instance => new ProducerBuilder<Null, string>(config).Build());
+
             //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             //   .AddCookie(option =>
             //   {
@@ -45,6 +57,7 @@ namespace HGWork
             services.AddTransient<ITaskService, TaskService>();
             services.AddTransient<IReportService, ReportService>();
             services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<IKafkaExtension, KafkaExtension>();
 
             // Registration Mapper 
             // Auto Mapper Configurations
